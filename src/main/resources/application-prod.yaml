@@ -14,7 +14,7 @@ spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://\${DB_HOST:localhost}:\${DB_PORT:3306}/\${DB_NAME}?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME}?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
     username: root
     password: qqq
   jpa:
@@ -28,7 +28,7 @@ spring:
     multipart:
       max-file-size: 10240MB
       max-request-size: 10240MB
-      location: \${java.io.tmpdir}
+      location: ${java.io.tmpdir}
 management:
   endpoints:
     web:
@@ -39,7 +39,7 @@ logging:
   level:
     run.halo.app: INFO
   file:
-    path: \${user.home}/.halo/logs
+    path: ${user.home}/.halo/logs
 
 halo:
   download-timeout: 5m
